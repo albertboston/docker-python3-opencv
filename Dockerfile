@@ -7,7 +7,7 @@ RUN apt-get update && \
         cmake \
         git \
         wget \
-        git \
+        vim \
         unzip \
         yasm \
         pkg-config \
@@ -19,7 +19,7 @@ RUN apt-get update && \
         libtiff-dev \
         libavformat-dev \
         libpq-dev
-RUN git clone https://github.com/jasperproject/jasper-client.git jasper \ && chmod +x jasper/jasper.py \ && pip install --upgrade setuptools \ && pip install -r jasper/client/requirements.txt
+
 RUN pip install --upgrade seaborn jupyter notebook plotly dash==0.21.1 dash-renderer==0.13.0 dash-html-components==0.11.0 dash-core-components==0.23.0
 
 # Set up Jupyter Notebook for dev
